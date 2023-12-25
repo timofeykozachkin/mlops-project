@@ -1,17 +1,16 @@
 [tool.poetry]
-name = "mlops-project"
+name = "mlopsproject"
 version = "0.1.0"
 description = "MLOps course project"
-authors = ["timofeykozachkin <timofeykozachkin@gmail.com>"]
+authors = ["timofei kozachkin"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.9"
-torch = "^2.1.2"
-scikit-learn = "^1.3.2"
 pandas = "^2.1.4"
 numpy = "^1.26.2"
-matplotlib = "^3.8.2"
+scikit-learn = "^1.3.2"
+catboost = "^1.2.2"
 
 
 [build-system]
