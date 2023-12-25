@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mlopsproject"
+name = "airlines"
 version = "0.1.0"
 description = "MLOps course project"
 authors = ["timofei kozachkin"]
