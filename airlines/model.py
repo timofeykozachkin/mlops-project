@@ -21,6 +21,9 @@ class AirlinesCatBoost:
         )
         return clf
 
+    def set_model_params(self, params):
+        self.model["classifier"].set_params(**params)
+
     def get_model(self):
         return self.model
 
