@@ -2,7 +2,8 @@
 name = "airlines"
 version = "0.1.0"
 description = "MLOps course project"
-authors = ["timofei kozachkin"]
+authors = ["timofei kozachkin <tdkozachkin@edu.hse.ru>"]
+license = "Apache-2.0"
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -12,6 +13,13 @@ numpy = "^1.26.2"
 scikit-learn = "^1.3.2"
 catboost = "^1.2.2"
 
+[tool.black]
+line-length = 90
+target-version = ["py39"]
+
+[tool.isort]
+line_length = 90
+profile = "black"
 
 [build-system]
 requires = ["poetry-core"]

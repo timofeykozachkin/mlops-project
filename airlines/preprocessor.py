@@ -1,7 +1,7 @@
-from sklearn.pipeline import Pipeline
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.compose import ColumnTransformer
+from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 
 class AirlinesPreprocessor:
@@ -18,17 +18,15 @@ class AirlinesPreprocessor:
     def call_numeric_transformer(self):
         numeric_transformer = Pipeline(
             steps=[
-                ("imputer", SimpleImputer(strategy="most_frequent")), 
-                ("scaler", StandardScaler())
-                ]
+                ("imputer", SimpleImputer(strategy="most_frequent")),
+                ("scaler", StandardScaler()),
+            ]
         )
         return numeric_transformer
 
     def call_categorical_transformer(self):
         categorical_transformer = Pipeline(
-            steps=[
-                ("encoder", OneHotEncoder(handle_unknown="ignore"))
-            ]
+            steps=[("encoder", OneHotEncoder(handle_unknown="ignore"))]
         )
         return categorical_transformer
 
@@ -41,7 +39,7 @@ class AirlinesPreprocessor:
         preprocessor = ColumnTransformer(
             transformers=[
                 ("num", numeric_transformer, numeric_features),
-                ("cat", categorical_transformer, categorical_features)
+                ("cat", categorical_transformer, categorical_features),
             ]
         )
         return preprocessor

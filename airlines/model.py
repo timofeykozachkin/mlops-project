@@ -1,5 +1,5 @@
-from sklearn.pipeline import Pipeline
 from catboost import CatBoostClassifier
+from sklearn.pipeline import Pipeline
 
 from .preprocessor import AirlinesPreprocessor
 
@@ -15,8 +15,8 @@ class AirlinesCatBoost:
         preprocessor = self.get_preprocessor()
         clf = Pipeline(
             steps=[
-                ("preprocessor", preprocessor()), 
-                ("classifier", CatBoostClassifier())
+                ("preprocessor", preprocessor()),
+                ("classifier", CatBoostClassifier()),
             ]
         )
         return clf
