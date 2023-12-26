@@ -1,6 +1,7 @@
 import subprocess
 
 import hydra
+import joblib
 from omegaconf import DictConfig, OmegaConf
 
 from airlines.dataset import AirlinesDataset
@@ -18,9 +19,11 @@ def train(cfg: DictConfig):
     model.set_model_params(params)
     model.fit(dataset.get_train_features(), dataset.get_train_target())
 
-    model.get_model().save_model("data/airlines_model", format="cbm")
+    model.get_model().save_model("model/airlines_model", format="cbm")
+    joblib.dump(model.get_preprocessor_pipe(), "model/airlines_preprocessor.joblib")
 
 
 if __name__ == "__main__":
-    subprocess.run(["dvc", "pull"])
+    subprocess.run(["dvc", "pull", "data/airlines_data.csv.dvc"])
     train()
+    # subprocess.run(["dvc", "push"])
