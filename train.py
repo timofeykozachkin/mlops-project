@@ -14,9 +14,11 @@ def train(cfg: DictConfig):
     model = AirlinesCatBoost(
         dataset.get_numeric_features(), dataset.get_categorical_features()
     )
-    model.set_model_params(params)
 
+    model.set_model_params(params)
     model.fit(dataset.get_train_features(), dataset.get_train_target())
+
+    model.get_model().save_model("data/airlines_model", format="cbm")
 
 
 if __name__ == "__main__":
