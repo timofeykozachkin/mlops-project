@@ -26,4 +26,3 @@ def train(cfg: DictConfig):
 if __name__ == "__main__":
     subprocess.run(["dvc", "pull", "data/airlines_data.csv.dvc"])
     train()
-    # subprocess.run(["dvc", "push"])
