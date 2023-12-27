@@ -1,0 +1,5 @@
+outs:
+- md5: 8bed9a047bfa0afc5aadb059d3a373c2
+  size: 461110
+  hash: md5
+  path: airlines_predictions.csv
