@@ -47,3 +47,6 @@ class AirlinesCatBoost:
 
     def predict(self, X_val):
         return self.model.predict(X_val)
+
+    def predict_proba(self, X_val):
+        return self.model.predict_proba(X_val)

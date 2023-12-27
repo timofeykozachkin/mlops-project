@@ -1,5 +1,5 @@
 outs:
-- md5: 9b95ecd0048a29477b06152d5cea43d2
-  size: 1088696
+- md5: 96ec771687b668c882aa2d0dfaec7575
+  size: 1086944
   hash: md5
   path: airlines_model

@@ -1,5 +1,5 @@
 outs:
-- md5: 70b788ac49d804fba5392060702d8f8b
+- md5: 1770c670096a256285805b44593020e2
   size: 5982
   hash: md5
   path: airlines_preprocessor.joblib

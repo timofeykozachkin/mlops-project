@@ -1,7 +1,8 @@
 model: catboost
 params:
+ iterations: 1000
  max_leaves: 64
  depth: 6
  l2_leaf_reg: 3
- iterations: 1
  leaf_estimation_iterations: 10
+ random_seed: 42
